@@ -46,12 +46,23 @@ namespace MethodsPractice
             //int userAge = int.Parse(Console.ReadLine());
             //Console.WriteLine("The user will retire in " +  RetirementCalculator(userAge) + " years.");
 
-            double hoursWorked = 42.3;
-            double hourlyWage = 12.50;
+            //double hoursWorked = 42.3;
+            //double hourlyWage = 12.50;
 
-            Console.WriteLine("Your monthly wage is {0}.", WageCalculator(hoursWorked, hourlyWage));
+            //Console.WriteLine("Your monthly wage is {0}.", WageCalculator(hoursWorked, hourlyWage));
 
+            //Console.WriteLine("What is your name?");
+            //string userName = Console.ReadLine();
+            //Console.WriteLine("What is your favorite movie?");
+            //string favMovie = Console.ReadLine();
+            //FavoriteMovie(userName, favMovie);
 
+            int carTotal = 13000;
+            
+
+            Console.WriteLine("What many months do you want to take the pay the car off?");
+            int month = int.Parse(Console.ReadLine());
+            Console.WriteLine("Your monthly car payment is ${0}",CarPayment(carTotal, month ));
         }
 
         //Method header
@@ -124,6 +135,23 @@ namespace MethodsPractice
             //This method should calculate the monthly wage
             double monthlyWage = (hoursWorkedWeekly * 52 * hourlyWage) / 12;
             return monthlyWage;
+        }
+
+        //Create two methods of your choosing. At least one of the methods should have a non void return type
+        //Both of the methods should take at least one parameter
+        //Remember when naming your method that it should represent what your method does.
+        //Your method should only aim to accomplish one thing.
+        //Be creative
+
+        public static void FavoriteMovie (string name, string movie)
+        {
+            Console.WriteLine("{0}'s favorite movie is {1}", name, movie);
+        }
+
+        public static int CarPayment(int toatlCost, int months)
+        {
+            int monthlyPayment = (toatlCost / months);
+            return monthlyPayment;
         }
     }
 }
